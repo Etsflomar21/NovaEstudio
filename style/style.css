@@ -314,6 +314,23 @@ section{
   line-height:1.75;
 }
 
+.hero-points{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:22px;
+}
+
+.hero-points span{
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:999px;
+  background:rgba(255,255,255,.11);
+  color:rgba(255,255,255,.92);
+  font-size:.9rem;
+  font-weight:800;
+  padding:9px 12px;
+}
+
 .hero-actions,
 .card-actions{
   display:flex;
@@ -381,6 +398,46 @@ section{
 .trust-grid span{
   color:var(--gris);
   font-weight:700;
+}
+
+.quick-quote{
+  padding:34px 20px 18px;
+}
+
+.quick-quote-grid{
+  display:grid;
+  grid-template-columns:1.15fr 1fr auto;
+  align-items:center;
+  gap:28px;
+  border:1px solid rgba(6,43,85,.1);
+  border-radius:var(--radio);
+  background:var(--blanco);
+  box-shadow:0 14px 36px rgba(6,43,85,.08);
+  padding:28px;
+}
+
+.quick-quote h2{
+  max-width:520px;
+  color:var(--azul);
+  font-size:clamp(1.45rem, 3vw, 2.1rem);
+  line-height:1.14;
+  margin-top:8px;
+}
+
+.quick-quote ul{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  list-style:none;
+}
+
+.quick-quote li{
+  border:1px solid rgba(6,43,85,.08);
+  border-radius:var(--radio);
+  background:#f8fbff;
+  color:var(--azul);
+  font-weight:850;
+  padding:12px 14px;
 }
 
 .section-title{
@@ -564,6 +621,89 @@ section{
   transform:translateY(-5px);
 }
 
+.plans{
+  background:#ffffff;
+}
+
+.plans-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.plan-card{
+  display:flex;
+  min-height:430px;
+  flex-direction:column;
+  border:1px solid rgba(6,43,85,.1);
+  border-radius:var(--radio);
+  background:#fbfdff;
+  padding:30px;
+  box-shadow:0 12px 30px rgba(6,43,85,.07);
+}
+
+.plan-card.featured{
+  border-color:rgba(216,168,61,.65);
+  background:linear-gradient(180deg,#ffffff 0%,#fff9ea 100%);
+  box-shadow:0 22px 50px rgba(6,43,85,.13);
+  transform:translateY(-10px);
+}
+
+.plan-label{
+  width:max-content;
+  border-radius:999px;
+  background:var(--dorado-suave);
+  color:#806016;
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.06em;
+  padding:8px 12px;
+  text-transform:uppercase;
+}
+
+.plan-card h3{
+  color:var(--azul);
+  font-size:1.65rem;
+  line-height:1.12;
+  margin:18px 0 12px;
+}
+
+.plan-card p:not(.plan-label){
+  color:var(--gris);
+  line-height:1.75;
+}
+
+.plan-card ul{
+  display:grid;
+  gap:10px;
+  list-style:none;
+  margin:22px 0 28px;
+}
+
+.plan-card li{
+  color:var(--texto);
+  font-weight:750;
+  line-height:1.4;
+  padding-left:24px;
+  position:relative;
+}
+
+.plan-card li::before{
+  content:"";
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:var(--dorado);
+  position:absolute;
+  left:0;
+  top:.42em;
+}
+
+.plan-card .btn-primary,
+.plan-card .btn-secondary{
+  margin-top:auto;
+}
+
 .benefit-icon{
   width:68px;
   height:68px;
@@ -724,6 +864,23 @@ section{
   margin-bottom:28px;
 }
 
+.contact-checklist{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0 auto 28px;
+}
+
+.contact-checklist span{
+  border:1px solid rgba(216,168,61,.3);
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  color:rgba(255,255,255,.9);
+  font-weight:850;
+  padding:10px 14px;
+}
+
 .faq{
   background:var(--blanco);
 }
@@ -772,12 +929,90 @@ section{
   padding:0 24px 22px;
 }
 
+.socials{
+  background:linear-gradient(180deg,#ffffff 0%,#f6f8fc 100%);
+}
+
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.social-card{
+  min-height:132px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  border:1px solid rgba(6,43,85,.1);
+  border-radius:var(--radio);
+  background:var(--blanco);
+  color:var(--texto);
+  padding:22px;
+  text-decoration:none;
+  box-shadow:0 12px 30px rgba(6,43,85,.07);
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.social-card:hover{
+  border-color:rgba(216,168,61,.45);
+  box-shadow:0 18px 42px rgba(6,43,85,.12);
+  transform:translateY(-4px);
+}
+
+.social-icon{
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:var(--radio);
+  color:var(--blanco);
+  flex:0 0 auto;
+}
+
+.social-icon svg{
+  width:28px;
+  height:28px;
+  fill:currentColor;
+}
+
+.social-icon.whatsapp{
+  background:#00a85a;
+}
+
+.social-icon.instagram{
+  background:linear-gradient(135deg,#7a36d9,#e23b76,#f6a13a);
+}
+
+.social-icon.facebook{
+  background:#1877f2;
+}
+
+.social-icon.tiktok{
+  background:#111827;
+}
+
+.social-card strong{
+  display:block;
+  color:var(--azul);
+  font-size:1.05rem;
+  margin-bottom:6px;
+}
+
+.social-card small{
+  color:var(--gris);
+  font-size:.92rem;
+  font-weight:800;
+}
+
 .floating-whatsapp{
   position:fixed;
   right:22px;
   bottom:22px;
   z-index:900;
   display:inline-flex;
+  gap:10px;
   min-height:48px;
   align-items:center;
   justify-content:center;
@@ -786,18 +1021,16 @@ section{
   color:var(--blanco);
   box-shadow:0 16px 34px rgba(0,168,90,.28);
   font-weight:900;
-  opacity:0;
   padding:0 20px;
-  pointer-events:none;
   text-decoration:none;
-  transform:translateY(18px);
   transition:opacity .25s ease, transform .25s ease, box-shadow .25s ease;
 }
 
-.floating-whatsapp.is-visible{
-  opacity:1;
-  pointer-events:auto;
-  transform:translateY(0);
+.floating-whatsapp svg{
+  width:23px;
+  height:23px;
+  fill:currentColor;
+  flex:0 0 auto;
 }
 
 .floating-whatsapp:hover{
@@ -840,8 +1073,18 @@ footer{
   }
 
   .benefit-grid,
+  .plans-grid,
+  .social-grid,
   .steps{
     grid-template-columns:repeat(2,1fr);
+  }
+
+  .quick-quote-grid{
+    grid-template-columns:1fr;
+  }
+
+  .quick-quote-grid .btn-primary{
+    width:max-content;
   }
 }
 
@@ -954,14 +1197,37 @@ footer{
   }
 
   .benefit-grid,
+  .plans-grid,
+  .social-grid,
   .steps,
   .about-list{
     grid-template-columns:1fr;
   }
 
+  .quick-quote{
+    padding:28px 14px 0;
+  }
+
+  .quick-quote-grid{
+    padding:22px;
+  }
+
+  .quick-quote ul{
+    grid-template-columns:1fr;
+  }
+
+  .quick-quote-grid .btn-primary{
+    width:100%;
+  }
+
+  .plan-card,
   .about-highlight,
   .about-card{
     padding:28px 22px;
+  }
+
+  .plan-card.featured{
+    transform:none;
   }
 
   .trust-grid div{
@@ -972,6 +1238,7 @@ footer{
     left:16px;
     right:16px;
     bottom:14px;
+    min-height:52px;
   }
 
   footer{

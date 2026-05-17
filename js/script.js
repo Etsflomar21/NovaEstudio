@@ -7,7 +7,6 @@ const carouselTrack = document.getElementById('carouselTrack');
 const revealItems = document.querySelectorAll('.reveal');
 const carouselButtons = document.querySelectorAll('[data-carousel-direction]');
 const serviceToggles = document.querySelectorAll('[data-service-toggle]');
-const floatingWhatsApp = document.querySelector('.floating-whatsapp');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 let currentSlide = 0;
@@ -147,12 +146,6 @@ function setupActiveNavigation(){
   sections.forEach(section => observer.observe(section));
 }
 
-function updateFloatingWhatsApp(){
-  if(!floatingWhatsApp) return;
-
-  floatingWhatsApp.classList.toggle('is-visible', window.scrollY > 520);
-}
-
 if(menuToggle){
   menuToggle.addEventListener('click', toggleMenu);
 }
@@ -173,8 +166,6 @@ document.addEventListener('keydown', (event) => {
     closeMenu();
   }
 });
-
-window.addEventListener('scroll', updateFloatingWhatsApp, { passive:true });
 
 dots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
@@ -209,4 +200,3 @@ if(carouselTrack){
 startHeroSlider();
 setupRevealAnimations();
 setupActiveNavigation();
-updateFloatingWhatsApp();
